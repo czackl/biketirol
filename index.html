@@ -9,18 +9,29 @@
     <title>Bike Trail Tirol Beispiel</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
     <!-- Leaflet Providers -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js" integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"
+        integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Leaflet FullScreen -->
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
+
+    <!-- leaflet-elevation -->
+    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.css" />
+    <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.js"></script>
 
     <!-- eigene Stile und Hauptskript -->
     <link rel="stylesheet" href="main.css">
@@ -36,8 +47,13 @@
             </nav>
         </header>
         <article>
-            <h1><a href="https://www.tirol.at/reisefuehrer/sport/radfahren/biketouren/a-bike-trail-tirol-alpbach-zell"></a>Etappe 15: Alpbach - Zell</h1>
-            <p>Von Alpbach verläuft die mittelschwierige Etappe auf Forst- und Radwegen und zum Teil auf asphaltierten (Neben-)Straßen und führt über den Kerschbaumer Sattel ins Zillertal. Die 43 Kilometer lange Mountainbikestrecke mit rund 1.150 Höhenmeter verlangt von Beginn an Kondition. Im Gasthaus Hornboden können Hungrige sich für die Abfahrt stärken.</p>
+            <h1><a
+                    href="https://www.tirol.at/reisefuehrer/sport/radfahren/biketouren/a-bike-trail-tirol-alpbach-zell"></a>Etappe
+                15: Alpbach - Zell</h1>
+            <p>Von Alpbach verläuft die mittelschwierige Etappe auf Forst- und Radwegen und zum Teil auf asphaltierten
+                (Neben-)Straßen und führt über den Kerschbaumer Sattel ins Zillertal. Die 43 Kilometer lange
+                Mountainbikestrecke mit rund 1.150 Höhenmeter verlangt von Beginn an Kondition. Im Gasthaus Hornboden
+                können Hungrige sich für die Abfahrt stärken.</p>
 
             <div class="summary">
                 <div class="summary-badge">
@@ -59,22 +75,42 @@
                     <i class="fa-solid fa-heart-pulse"></i> mittelschwierig
                 </div>
                 <div class="summary-badge">
-                    <i class="fas fa-download"></i> <a href=https://www.tirol.at/action/download?id=address_661&downloadId=488">Download GPX</a>
+                    <i class="fas fa-download"></i> <a
+                        href=https://www.tirol.at/action/download?id=address_661&downloadId=488">Download GPX</a>
                 </div>
             </div>
 
             <div id="map"></div>
+            <div id="profile"></div>
 
             <h3>Streckenbeschreibung</h3>
-            <p>Vom Zentrum Alpbachs fährt man etwa 750 Meter auf der Straße abwärts zur Talstraße. Hier zweigt man links ab und fährt bis Inneralpbach. Man hält sich nun an die Bikeroute 306 „Tour 25 Farmkehralm“. Leicht ansteigend bleibt man bis zur Abzweigung „Hornboden 307“ immer im Talgrund. Ab hier radelt man in einigen Serpentinen zur Moser-Baumgartenalm (1.603 m). Nun geht es weniger stark ansteigend über die Wiedersbergeralm zum Berggasthaus Hornboden im Schigebiet. Es ist nun nur mehr ein kurzer Anstieg zur Bergstation der Seilbahn, dem höchsten Punkt der Tour auf ca. 1.850 m Seehöhe. Ab hier hält man sich an die Beschilderung der Bikeroute Nr. 320 bzw. an die gelben Wanderwegweiser Richtung „Hygna-Reith“ und in weiterer Folge an „Kerschbaumer Sattel“. Die Strecke verläuft über Forstwege, immer abwärts. Kurz vor dem Kerschbaumer Sattel (kurzer Anstieg über rund 30 Höhenmeter) verwandelt sich der Forstweg wieder in eine asphaltierte Straße. Auf der Zillertaler Seite des Sattels fährt man etwa einen Kilometer abwärts. Nun zweigt man links auf die Radroute Nr. 429 ab (Achtung, der Wegweiser ist nur schlecht sichtbar). Es folgt nur ein kurzer Anstieg, danach verläuft die Strecke auf etwa 1.000 Meter Seehöhe über dem Zillertal taleinwärts. Man bleibt nun immer auf der Route Nr. 429 bis man nach einer längeren Abfahrt die Gemeinde Hart im Zillertal erreicht. Auf der Dorfstraße radelt man durch den Ort und weiter bis zum Ziller Fluss. Sofort nach der Brücke zweigt man links auf den Zillertalradweg (Nr. 13) ab und fährt auf diesem taleinwärts und ohne nennenswerte Anstiege bis ins Etappenziel nach Zell am Ziller.</p>
+            <p>Vom Zentrum Alpbachs fährt man etwa 750 Meter auf der Straße abwärts zur Talstraße. Hier zweigt man links
+                ab und fährt bis Inneralpbach. Man hält sich nun an die Bikeroute 306 „Tour 25 Farmkehralm“. Leicht
+                ansteigend bleibt man bis zur Abzweigung „Hornboden 307“ immer im Talgrund. Ab hier radelt man in
+                einigen Serpentinen zur Moser-Baumgartenalm (1.603 m). Nun geht es weniger stark ansteigend über die
+                Wiedersbergeralm zum Berggasthaus Hornboden im Schigebiet. Es ist nun nur mehr ein kurzer Anstieg zur
+                Bergstation der Seilbahn, dem höchsten Punkt der Tour auf ca. 1.850 m Seehöhe. Ab hier hält man sich an
+                die Beschilderung der Bikeroute Nr. 320 bzw. an die gelben Wanderwegweiser Richtung „Hygna-Reith“ und in
+                weiterer Folge an „Kerschbaumer Sattel“. Die Strecke verläuft über Forstwege, immer abwärts. Kurz vor
+                dem Kerschbaumer Sattel (kurzer Anstieg über rund 30 Höhenmeter) verwandelt sich der Forstweg wieder in
+                eine asphaltierte Straße. Auf der Zillertaler Seite des Sattels fährt man etwa einen Kilometer abwärts.
+                Nun zweigt man links auf die Radroute Nr. 429 ab (Achtung, der Wegweiser ist nur schlecht sichtbar). Es
+                folgt nur ein kurzer Anstieg, danach verläuft die Strecke auf etwa 1.000 Meter Seehöhe über dem
+                Zillertal taleinwärts. Man bleibt nun immer auf der Route Nr. 429 bis man nach einer längeren Abfahrt
+                die Gemeinde Hart im Zillertal erreicht. Auf der Dorfstraße radelt man durch den Ort und weiter bis zum
+                Ziller Fluss. Sofort nach der Brücke zweigt man links auf den Zillertalradweg (Nr. 13) ab und fährt auf
+                diesem taleinwärts und ohne nennenswerte Anstiege bis ins Etappenziel nach Zell am Ziller.</p>
 
         </article>
         <footer>
             <strong>Datenquellen:</strong>
             <nav>
-                <a href="https://www.tirol.at/reisefuehrer/sport/mountainbiken/bike-trail-tirol">Bike Trail Tirol (Online Reiseführer Tirol)</a> |
-                <a href="https://www.tirol.at/reisefuehrer/sport/radfahren/biketouren/a-bike-trail-tirol-alpbach-zell">Etappe 15: Alpbach - Zell</a> |
-                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>
+                <a href="https://www.tirol.at/reisefuehrer/sport/mountainbiken/bike-trail-tirol">Bike Trail Tirol
+                    (Online Reiseführer Tirol)</a> |
+                <a href="https://www.tirol.at/reisefuehrer/sport/radfahren/biketouren/a-bike-trail-tirol-alpbach-zell">Etappe
+                    15: Alpbach - Zell</a> |
+                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol">eGrundkarte
+                    Tirol</a>
             </nav>
         </footer>
     </main>
